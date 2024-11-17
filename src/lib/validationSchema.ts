@@ -18,3 +18,9 @@ export const feedbackSchema = z.object({
 })
 
 export type FeedbackFormData = z.infer<typeof feedbackSchema>
+
+export const newsletterSchema = z.object({
+  email: z.string().email('Invalid email address'),
+})
+
+export type NewsletterFormData = z.infer<typeof newsletterSchema>

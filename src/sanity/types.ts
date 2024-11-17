@@ -68,6 +68,15 @@ export type Geopoint = {
   alt?: number
 }
 
+export type Subscriber = {
+  _id: string
+  _type: 'subscriber'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  email?: string
+}
+
 export type Feedbacks = {
   _id: string
   _type: 'feedbacks'
@@ -271,6 +280,7 @@ export type AllSanitySchemaTypes =
   | SanityImageDimensions
   | SanityFileAsset
   | Geopoint
+  | Subscriber
   | Feedbacks
   | WorkInquiry
   | Projects
