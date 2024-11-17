@@ -108,6 +108,7 @@ function NewsletterForm() {
       </div>
     </form>
   )
+  // return null
 }
 
 export function Footer() {
