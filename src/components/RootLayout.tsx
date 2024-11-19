@@ -20,6 +20,7 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import Image from 'next/image'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -68,8 +69,9 @@ function Header({
           aria-label="Home"
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
+          className='flex gap-x-1.5 items-center'
         >
-          <Logomark
+          {/* <Logomark
             className="h-8 sm:hidden"
             invert={invert}
             filled={logoHovered}
@@ -78,7 +80,12 @@ function Header({
             className="hidden h-8 sm:block"
             invert={invert}
             filled={logoHovered}
+          /> */}
+
+          <Image src="/logo.svg" alt='Codex logo' width={400} height={400} className='w-12 h-10'
           />
+                    <span className='font-bold text-2xl hidden md:block'>CodexFarm</span>
+
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>

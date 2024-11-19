@@ -1,3 +1,4 @@
+import React from 'react'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
@@ -7,7 +8,10 @@ import { formatDate } from '@/lib/formatDate'
 import { client } from '@/sanity/lib/client'
 import { POST_DETAILS_BY_SLUG, POSTS_QUERY } from '@/sanity/lib/queries'
 import { notFound } from 'next/navigation'
-import React from 'react'
+
+
+import markdownit from 'markdown-it'
+const md = markdownit()
 
 const BlogDetails = async ({
   params,
@@ -27,6 +31,8 @@ const BlogDetails = async ({
     description: post.shortDescription ?? '',
     title: post.title ?? '',
   }))
+
+  const content = md.render(post.content ?? '')
 
   return (
     <>
@@ -50,8 +56,20 @@ const BlogDetails = async ({
 
         <FadeIn>
           {/* TODO: Parse MDX from sanity */}
-
-          {post.content}
+          <div className="mt-24 sm:mt-32 lg:mt-40">
+            {/* <div>
+              <Image alt="thumbnail" src={urlFor(post.image).url()} height={800} width={800} className='mx-auto w-full' />
+            </div> */}
+            {content ? (
+              <article
+                className="prose lg:prose-xl mx-auto font-display"
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+            ) : (
+              <p>Blog post not found</p>
+            )}
+         
+          </div>
         </FadeIn>
       </Container>
       {posts.length > 0 && (

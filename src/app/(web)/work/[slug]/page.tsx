@@ -6,8 +6,13 @@ import { PageLinks } from '@/components/PageLinks'
 import { client } from '@/sanity/lib/client'
 import { PROJECT_DETAILS_BY_SLUG, PROJECT_QUERY } from '@/sanity/lib/queries'
 import { notFound } from 'next/navigation'
+import markdownit from 'markdown-it'
+const md = markdownit()
 import React from 'react'
 export const relative = 1
+
+import '../../../../styles/style.css';
+
 
 const ProjectDetails = async ({
   params,
@@ -27,6 +32,7 @@ const ProjectDetails = async ({
     description: project.projectShortDescription ?? '',
     title: project.projectSlogun ?? '',
   }))
+  const content = md.render(caseStudy.description ?? '')
 
   return (
     <>
@@ -41,7 +47,7 @@ const ProjectDetails = async ({
           </PageIntro>
 
           <FadeIn>
-            <div className="mt-24 border-t border-neutral-200 bg-white/50 sm:mt-32 lg:mt-40">
+            <div className="mt-24 border-t border-b border-neutral-200 bg-white/50 sm:mt-32 lg:mt-40">
               <Container>
                 <div className="mx-auto max-w-5xl">
                   <dl className="min-md:grid-cols-3 -mx-6 grid grid-cols-1 text-sm text-neutral-950 sm:mx-0 sm:grid-cols-6">
@@ -73,7 +79,7 @@ const ProjectDetails = async ({
                             href={caseStudy.sourceCode}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-primary-500 hover:underline"
+                            className="text-primary-500 hover:underline cursor-pointer"
                           >
                             View on GitHub
                           </a>
@@ -108,7 +114,16 @@ const ProjectDetails = async ({
         <Container className="mt-24 sm:mt-32 lg:mt-40">
           <FadeIn>
             {/* TODO: Parse markdown to HTML from sanity*/}
-            {caseStudy.description}
+            
+
+            {content ? (
+              <article
+                className="prose lg:prose-xl mx-auto font-display"
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+            ) : (
+              <p>Blog post not found</p>
+            )}
           </FadeIn>
         </Container>
       </article>
