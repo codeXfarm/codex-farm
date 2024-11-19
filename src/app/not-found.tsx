@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import '@/styles/tailwind.css'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'

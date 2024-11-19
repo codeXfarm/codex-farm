@@ -43,6 +43,7 @@
     "remark-unwrap-images": "^4.0.0",
     "sanity": "^3.64.0",
     "sanity-plugin-markdown": "^5.0.0",
+    "sharp": "^0.33.5",
     "shiki": "^0.11.1",
     "sonner": "^1.7.0",
     "styled-components": "^6.1.13",

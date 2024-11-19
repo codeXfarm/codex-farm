@@ -2,7 +2,10 @@ import { type Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
-  content: ['./src/**/*.{js,jsx,mdx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,mdx,ts,tsx}',
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     
     fontSize: {

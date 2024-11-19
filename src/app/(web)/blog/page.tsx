@@ -11,11 +11,10 @@ import { PageIntro } from '@/components/PageIntro'
 import { formatDate } from '@/lib/formatDate'
 import { client } from '@/sanity/lib/client'
 import { POSTS_QUERY } from '@/sanity/lib/queries'
-import { urlFor } from '@/sanity/lib/image'
-import { Author, Posts } from '@/sanity/types'
+import {  Posts } from '@/sanity/types'
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Blog | CodexFarm',
   description:
     'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
 }

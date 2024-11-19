@@ -10,7 +10,10 @@ import { POST_DETAILS_BY_SLUG, POSTS_QUERY } from '@/sanity/lib/queries'
 import { notFound } from 'next/navigation'
 
 
+
 import markdownit from 'markdown-it'
+
+export const revalidate = 10
 const md = markdownit()
 
 const BlogDetails = async ({
@@ -62,7 +65,7 @@ const BlogDetails = async ({
             </div> */}
             {content ? (
               <article
-                className="prose lg:prose-xl mx-auto font-display"
+                className="prose lg:prose-xl mx-auto font-display prose-img:rounded-3xl"
                 dangerouslySetInnerHTML={{ __html: content }}
               />
             ) : (

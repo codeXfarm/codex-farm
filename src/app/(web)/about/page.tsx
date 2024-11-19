@@ -171,7 +171,7 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-          Studio was born out of a simple idea: providing high-quality web development and design services without the high price tag. We believe in doing things differently. Our goal is to offer exceptional results at a price point that makes sense for both startups and established companies.
+          <span className='font-bold'>CodexFarm</span> was born out of a simple idea. We providing high-quality web development and design services without the high price tag. We believe in doing things differently. Our goal is to offer exceptional results at a price point that makes sense for both startups and established companies.
           </p>
           <p>
           Our team is driven by creativity, innovation, and a dedication to crafting tailored solutions that meet the unique needs of each client. From beautiful websites to powerful applications, we make sure that every project is built with precision, care, and a touch of originality.

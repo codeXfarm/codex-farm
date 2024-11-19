@@ -173,7 +173,7 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
+        We approached <em>CodexFarm</em> because we loved their past work. They
         delivered something remarkably similar in record time.
       </Testimonial>
 

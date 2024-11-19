@@ -179,21 +179,29 @@ function Services() {
 
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'We are a development Farm working at the intersection of design and technology.',
 }
 
 export default async function Home() {
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
+        <FadeIn className="max-w-4xl ">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-          Empowering Brands with Cutting-Edge Web Development.
+          Empower Your Digital Journey with <span >CodexFarm</span>
           </h1>
+         
+
           <p className="mt-6 text-xl text-neutral-600">
-          We are a development studio operating at the crossroads of design and technology. It’s a busy and exciting space where creativity meets innovation. Our team thrives in this fast-paced environment, crafting exceptional solutions that bridge aesthetics and functionality.
+          <span className='font-medium'>CodexFarm</span> is a development agency operating at the dynamic crossroads of design and technology. In this bustling and inspiring space, creativity meets innovation head-on. Our team thrives in a fast-paced environment, crafting exceptional solutions that seamlessly bridge aesthetics and functionality.
           </p>
         </FadeIn>
+        <div className="max-w-2xl px-4 py-8">
+      {/* nderline  */}
+
+      
+      
+    </div>
       </Container>
 
       <Clients />
