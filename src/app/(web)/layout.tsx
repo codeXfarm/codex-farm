@@ -7,7 +7,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - CodexFarm',
-    default: 'CodexFarm - Award winning developer studio based in Denmark',
+    default: 'CodexFarm - Cutting-Edge Web Development.',
   },
 }
 

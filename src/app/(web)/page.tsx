@@ -159,19 +159,16 @@ function Services() {
               The rest of the website will be a shell that uses lorem ipsum
               everywhere.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="UI/UX Design & Front-End Development">
+            Create visually appealing and responsive interfaces using Tailwind CSS and Material UI, ensuring a top-notch user experience.
             </ListItem>
             <ListItem title="E-commerce">
               We are at the forefront of modern e-commerce development. Which
               mainly means adding your logo to the Shopify store template we’ve
               used for the past six years.
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Custom Application Development">
+            Develop tailored applications with a focus on performance and functionality, leveraging tools like React, Node.js, and Mongoose.
             </ListItem>
           </List>
         </div>
@@ -191,12 +188,10 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+          Empowering Brands with Cutting-Edge Web Development.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+          We are a development studio operating at the crossroads of design and technology. It’s a busy and exciting space where creativity meets innovation. Our team thrives in this fast-paced environment, crafting exceptional solutions that bridge aesthetics and functionality.
           </p>
         </FadeIn>
       </Container>
