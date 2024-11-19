@@ -48,8 +48,8 @@ async function Clients() {
                   <FadeIn>
                     <div className="flex min-w-60 items-center gap-x-2 hover:cursor-pointer">
                       <Image
-                        src={project.logo}
-                        alt="logo"
+  src={project?.logo ? urlFor(project.logo).url() : ''}
+  alt="logo"
                         width={64}
                         height={64}
                         unoptimized
@@ -94,7 +94,8 @@ async function CaseStudies() {
                     <Image
                       height={64}
                       width={64}
-                      src={caseStudy.logo}
+                      src={caseStudy?.logo ? urlFor(caseStudy.logo).url() : ''}
+
                       alt="Project Logo"
                       className="h-16 w-16"
                       unoptimized

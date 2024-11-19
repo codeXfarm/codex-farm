@@ -9,7 +9,6 @@ import { notFound } from 'next/navigation'
 import markdownit from 'markdown-it'
 const md = markdownit()
 import React from 'react'
-export const relative = 1
 
 import '../../../../styles/style.css';
 
@@ -17,8 +16,8 @@ import '../../../../styles/style.css';
 const ProjectDetails = async ({
   params,
 }: {
-  params: Promise<{ slug: string }>
-  className?: string
+  params: { slug: string }
+ 
 }) => {
   const slug = (await params).slug
   const data = await client.fetch(PROJECT_DETAILS_BY_SLUG(slug))
